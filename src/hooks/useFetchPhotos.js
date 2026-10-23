@@ -6,7 +6,7 @@ export default function useFetchPhotos() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const page = Math.floor(Math.random() * 8) + 2;
+        const page = 2;
         const res = await fetch(`https://picsum.photos/v2/list?page=${page}&limit=30`);
         if (!res.ok) throw new Error('Failed');
         let data = await res.json();
